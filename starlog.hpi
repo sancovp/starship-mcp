@@ -1,0 +1,69 @@
+{
+  "name": "starlog_context",
+  "metadata": {
+    "project_name": "Starship Launch System",
+    "project_description": "Captain persona transformation and STARLOG preparation system - needs HPI file integration for launch routine"
+  },
+  "blocks": [
+    {
+      "type": "freestyle",
+      "content": "<STARLOG>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<CaptainsLog>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<ProjectMetadata>"
+    },
+    {
+      "type": "freestyle",
+      "content": "Project Name: Starship Launch System"
+    },
+    {
+      "type": "freestyle",
+      "content": "Description: Captain persona transformation and STARLOG preparation system - needs HPI file integration for launch routine"
+    },
+    {
+      "type": "freestyle",
+      "content": "Mode: standalone"
+    },
+    {
+      "type": "freestyle",
+      "content": "</ProjectMetadata>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<ModeInstructions>"
+    },
+    {
+      "type": "freestyle",
+      "content": "*No GIINT project linked - operating in standalone STARLOG mode*"
+    },
+    {
+      "type": "freestyle",
+      "content": "</ModeInstructions>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<Started>{session_start_content}</Started>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<DebugDiaries>{debug_logs_content}</DebugDiaries>"
+    },
+    {
+      "type": "freestyle",
+      "content": "<Ended>{session_end_content}</Ended>"
+    },
+    {
+      "type": "freestyle",
+      "content": "</CaptainsLog>"
+    },
+    {
+      "type": "freestyle",
+      "content": "</STARLOG>"
+    }
+  ]
+}
