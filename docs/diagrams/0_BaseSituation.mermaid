@@ -11,10 +11,10 @@ flowchart TD
     H[Vibe Coding Solution] -->|if| I[Wrap agent with context]
     I -->|then| J[Agent knows its role]
     I -->|then| K[Agent knows what it can do]
-    J --> L[Self-contextualizing]
-    K --> L
+    J -->|part_of| L[Self-contextualizing]
+    K -->|part_of| L
     L -->|can perform| M[Makes tools by itself and self-equip them]
-    M --> C
+    M -->|is_a| C
     C -->|can morph into| H
     M -->|transforms| A
     
