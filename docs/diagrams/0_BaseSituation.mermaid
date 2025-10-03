@@ -1,7 +1,7 @@
 flowchart TD
     A[AI Output] --> B{Can you verify it?}
     B -->|Yes - Run/Test| C[Testable Code]
-    B -->|Happens Externally| D[Arbitrary Deliverables]
+    B -->|Happens Externally - Can trust AI and iterate| D[Arbitrary Deliverables]
     B -->|No - Must trust AI| E[GAMBLING]
     
     C --> F[Safe to use]
