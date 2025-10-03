@@ -4,11 +4,6 @@
 # STARSHIP MCP
 
 ## Installation
-```
-pip install starship-mcp
-```
-
-or
 
 ```
 pip install pydantic-stack-core payload-discovery starlog-mcp starship-mcp
