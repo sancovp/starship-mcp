@@ -1,9 +1,9 @@
 flowchart TD
     A[AI Output] --> B{Can you verify it?}
-    B -->|Run/Test i.e. iterate| N[Yes!]
-    N --> C[Testable Code]
+    B -->|Verifiable| N[Yes!]
+    N -->|Run/Test i.e. iterate| C[Testable Code]
     B -->|Requires Consensus - Can let output be and iterate| N
-    N --> D[Arbitrary Deliverables]
+    N -->|Consensus based| D[Arbitrary Deliverables]
     B --> O[No!]
     O --> |Must trust AI| E[GAMBLING]
     
