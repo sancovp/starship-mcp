@@ -9,11 +9,11 @@ flowchart TD
     E --> G[Wasted time/money]
     
     H[Vibe Coding Solution] -->|if| I[Wrap agent with context]
-    I --> J[Agent knows its role]
-    I --> K[Agent knows what it can do]
+    I -->|then| J[Agent knows its role]
+    I -->|then| K[Agent knows what it can do]
     J --> L[Self-contextualizing]
     K --> L
-    L --> M[Makes tools by itself and self-equip them]
+    L -->|can perform| M[Makes tools by itself and self-equip them]
     M --> C
     C -->|can morph into| H
     M -->|transforms| A
