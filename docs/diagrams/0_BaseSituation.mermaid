@@ -1,0 +1,22 @@
+flowchart TD
+    A[AI Output] --> B{Can you verify it?}
+    B -->|Yes - Run/Test| C[Testable Code]
+    B -->|No verification needed| D[Arbitrary Deliverables]
+    B -->|No - Must trust| E[GAMBLING]
+    
+    C --> F[Safe to use]
+    D --> F
+    E --> G[Wasted time/money]
+    
+    H[Vibe Coding Solution] --> I[Wrap agent with context]
+    I --> J[Agent knows its role]
+    I --> K[Agent knows what it can do]
+    J --> L[Self-contextualizing]
+    K --> L
+    L --> M[Makes tools under your direction]
+    M --> C
+    
+    style C fill:#90EE90
+    style D fill:#90EE90
+    style E fill:#ffcccc
+    style M fill:#ffeb99
