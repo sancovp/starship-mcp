@@ -1,0 +1,9 @@
+flowchart TD
+    n2 --> B[STARSHIP + STARLOG]
+    B --> C[Auto Track Sessions]
+    B --> D[Manage Prompt Chains]
+    C --> E[Context Persists]
+    D --> E
+    E --> n1
+    n1@{ shape: "circle", label: "Problem Solved" }
+    n2@{ shape: "circle", label: "Context Loss Problem" }
