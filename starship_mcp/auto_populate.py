@@ -8,6 +8,7 @@ intelligence system. These configs are auto-populated when STARSHIP is first use
 
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Dict, Any
 import uuid
@@ -380,7 +381,10 @@ def get_file_resource(path: str) -> str:
 
 def get_registry_path() -> Path:
     """Get the path to the STARLOG flight configs registry."""
-    registry_path = Path("/tmp/heaven_data/registry/starlog_flight_configs_registry.json")
+    heaven_data_dir = os.getenv("HEAVEN_DATA_DIR")
+    if not heaven_data_dir:
+        raise ValueError("HEAVEN_DATA_DIR environment variable must be set")
+    registry_path = Path(os.path.join(heaven_data_dir, "registry/starlog_flight_configs_registry.json"))
     return registry_path
 
 
@@ -416,7 +420,10 @@ def save_registry(registry: Dict[str, Any]) -> None:
 
 def create_payload_discovery_file(name: str, config: Dict[str, Any]) -> str:
     """Create a PayloadDiscovery JSON file and return its path."""
-    pd_dir = Path("/tmp/heaven_data/default_flight_configs")
+    heaven_data_dir = os.getenv("HEAVEN_DATA_DIR")
+    if not heaven_data_dir:
+        raise ValueError("HEAVEN_DATA_DIR environment variable must be set")
+    pd_dir = Path(os.path.join(heaven_data_dir, "default_flight_configs"))
     pd_dir.mkdir(parents=True, exist_ok=True)
     
     pd_file = pd_dir / f"{name}_pd.json"
